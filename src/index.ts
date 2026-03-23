@@ -8,6 +8,7 @@ import { getQuote } from "./adapters/yahoo";
 import { computeBaselines } from "./data/baselines";
 import { formatSweepList } from "./utils/formatter";
 import cron from "node-cron";
+import "dotenv/config";
 
 const app = express();
 app.use(express.json());
