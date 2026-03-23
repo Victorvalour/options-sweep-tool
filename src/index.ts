@@ -13,7 +13,6 @@ import { formatSweepList } from "./utils/formatter";
 import cron from "node-cron";
 import "dotenv/config";
 
-console.log("REDIS_URL:", process.env.REDIS_URL);
 
 const app = express();
 app.use(express.json());
