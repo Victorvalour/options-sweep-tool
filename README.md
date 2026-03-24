@@ -36,7 +36,7 @@ npm run build
 ## Run
 
 ```
-node --env-file=.env dist/index.js
+node dist/index.js
 ```
 
 ## Deploy

@@ -5,7 +5,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import express, { Request, Response } from "express";
-// import { createContextMiddleware } from "@ctxprotocol/sdk";
+import { createContextMiddleware } from "@ctxprotocol/sdk";
 import { classifySymbol, getCachedSweeps } from "./classification/pipeline";
 import { getEquityContext } from "./adapters/alpaca";
 import { computeBaselines } from "./data/baselines";
@@ -16,7 +16,7 @@ import "dotenv/config";
 
 const app = express();
 app.use(express.json());
-// app.use("/mcp", createContextMiddleware());
+app.use("/mcp", createContextMiddleware());
 
 const TOOLS = [
   {
